@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #define MAX_PEOPLE 100
 #define INF 99999 // Representing an infinite distance for unconnected nodes
 
