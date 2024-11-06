@@ -135,32 +135,45 @@ void findMostInfluentialPerson(Graph* graph) {
     }
 }
 
+// Helper function for Depth-First Search to find clusters
+void DFS(Graph* graph, int personID, int visited[], int cluster[], int* clusterSize) {
+    visited[personID] = 1;
+    cluster[(*clusterSize)++] = personID; // Store the person in the current cluster
+
+    Node* temp = graph->adjList[personID];
+    while (temp) {
+        if (!visited[temp->personID]) {
+            DFS(graph, temp->personID, visited, cluster, clusterSize);
+        }
+        temp = temp->next;
+    }
+}
+
+// Function to find and print clusters of connected people
 void findClusters(Graph* graph) {
-    int visited[MAX_PEOPLE] = {0};
+    int visited[MAX_PEOPLE] = {0}; // Track visited people
     int clusterCount = 0;
 
-    void DFS(int personID) {
-        visited[personID] = 1;
-        Node* temp = graph->adjList[personID];
-        while (temp) {
-            if (!visited[temp->personID]) {
-                DFS(temp->personID);
-            }
-            temp = temp->next;
-        }
-    }
-
     printf("Clusters of connected people:\n");
+
     for (int i = 0; i < graph->numPeople; i++) {
         if (!visited[i]) {
-            clusterCount++;
-            printf("Cluster %d: ", clusterCount);
-            DFS(i);
-            for (int j = 0; j < graph->numPeople; j++) {
-                if (visited[j]) printf("%s ", graph->people[j]);
+            int cluster[MAX_PEOPLE];  // Array to store the current cluster members
+            int clusterSize = 0;      // Size of the current cluster
+
+            DFS(graph, i, visited, cluster, &clusterSize);
+
+            // Print the current cluster
+            printf("Cluster %d: ", ++clusterCount);
+            for (int j = 0; j < clusterSize; j++) {
+                printf("%s ", graph->people[cluster[j]]);
             }
             printf("\n");
         }
+    }
+
+    if (clusterCount == 0) {
+        printf("No clusters found. The network may be empty.\n");
     }
 }
 
