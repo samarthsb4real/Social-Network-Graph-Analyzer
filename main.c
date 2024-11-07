@@ -1,9 +1,8 @@
-#include <stdio.h>      // Standard input-output library for printf, scanf, etc.
-#include <stdlib.h>     // Standard library for dynamic memory allocation (malloc, free)
-#include <string.h>     // String handling library for functions like strcpy, strcmp
-#define MAX_PEOPLE 100  // Defining the maximum number of people in the network
-#define INF 99999       // Defining INF as a large number to represent infinite distance for unconnected nodes
-
+#include <stdio.h>     // Standard input-output library for printf, scanf, etc.
+#include <stdlib.h>    // Standard library for dynamic memory allocation (malloc, free)
+#include <string.h>    // String handling library for functions like strcpy, strcmp
+#define MAX_PEOPLE 100 // Defining the maximum number of people in the network
+#define INF 99999      // Defining INF as a large number to represent infinite distance for unconnected nodes
 
 // Define a structure for a node in the adjacency list
 typedef struct Node
