@@ -264,8 +264,9 @@ void findShortestPath(Graph *graph, int start, int end)
         printf("\n");
     }
 }
+
 // Function to find the most influential person in the graph
-void findMostInfluentialPerson(Graph *graph)
+void findMostInfluentialPerson(Graph *graph) 
 {
     int maxConnections = 0;         // Variable to store the highest number of connections found
     char *influentialPerson = NULL; // Pointer to store the name of the most influential person
