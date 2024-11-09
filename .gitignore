@@ -1,2 +1,10 @@
+# Ignore Python bytecode and cache directories
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore specific project files
 emp.py
-.vscode
+
+# Ignore VS Code settings
+.vscode/
