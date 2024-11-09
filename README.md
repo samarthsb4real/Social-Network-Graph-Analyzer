@@ -8,10 +8,6 @@ Welcome to the **Social Network Graph Analyzer**! This project allows you to ana
 - [Requirements](#requirements)
 - [Setup](#setup)
 - [How to Use](#how-to-use)
-- [File Structure](#file-structure)
-- [Code Walkthrough](#code-walkthrough)
-- [Future Improvements](#future-improvements)
-- [Contributors](#contributors)
 
 ---
 
