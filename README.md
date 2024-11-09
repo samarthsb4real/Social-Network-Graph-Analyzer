@@ -1,34 +1,95 @@
 # Social Network Graph Analyzer
 
-This **Social Network Graph Analyzer** project is a Python-based program designed to create, analyze, and visualize social networks. It uses **NetworkX** for graph operations and **Matplotlib** for network visualization, offering a variety of features for managing and exploring social network data.
+Welcome to the **Social Network Graph Analyzer**! This project allows you to analyze and interact with a social network represented as a graph. You can add people, create connections, find clusters, and analyze relationships within this network.
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Setup](#setup)
+- [How to Use](#how-to-use)
+- [File Structure](#file-structure)
+- [Code Walkthrough](#code-walkthrough)
+- [Future Improvements](#future-improvements)
+- [Contributors](#contributors)
+
+---
+
+## Project Overview
+The Social Network Graph Analyzer simulates a social network where individuals (nodes) and their connections (edges) form a graph. This project helps identify influential people, clusters, and connections in the network, and is designed for beginners to understand basic concepts of graph theory and algorithms like **Depth-First Search (DFS)** and **Breadth-First Search (BFS)**.
 
 ## Features
+- **Add People**: Add individuals to the network.
+- **Create Connections**: Connect people within the network.
+- **Find Shortest Path**: Discover the shortest path between two individuals using BFS.
+- **Identify Influential Person**: Identify the person with the most connections.
+- **Cluster Detection**: Find clusters of connected individuals using DFS.
+- **Delete People and Connections**: Manage the network by removing people or their connections.
 
-1. **Add/Remove People**: Add individuals (nodes) to the network and remove them when needed.
-2. **Add/Remove Connections**: Create or delete connections (edges) between individuals to represent relationships.
-3. **Find Shortest Path**: Calculate the shortest path between two people in the network.
-4. **Most Influential Person**: Identify the person with the most connections, making them the most influential.
-5. **Cluster Analysis**: Detect clusters of connected people within the network.
-6. **Network Visualization**: Generate a visual graph to better understand the social network structure.
-7. **Interactive Menu**: A user-friendly, interactive menu to guide the user through different options.
-
-## Technology Stack
-
+## Requirements
+- **C Compiler**: A C compiler such as `gcc` is required to compile and run the code.
+- **Terminal**: Access to a terminal or command prompt to execute the program.
 - **Python**: Programming language used for implementing the graph analyzer.
 - **NetworkX**: Library for the creation, manipulation, and study of complex networks.
-- **Matplotlib**: Library for data visualization, specifically used for rendering the social network graph.
+- **matplotlib**: Library for data visualization, specifically used for rendering the social network graph.
 
-## Prerequisites
-
-Before running the **Social Network Graph Analyzer**, make sure to have the following prerequisites in place:
-
+## Setup
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/yourusername/SocialNetworkGraphAnalyzer.git
+    ```
+2. **Navigate to Project Directory**:
+    ```bash
+    cd SocialNetworkGraphAnalyzer
+    ```
+3. **Compile the Program**:
+    ```bash
+    gcc social_network_graph_analyzer.c -o social_network_graph_analyzer
+    ```
+4. **Run the Program**:
+    ```bash
+    ./social_network_graph_analyzer
+    ```
+### For Python
 1. **Package Dependencies**:  
 
    The project uses two main libraries, **NetworkX** and **Matplotlib**:
-   
    - **NetworkX**: Used for graph creation, manipulation, and analysis.
    - **Matplotlib**: Used for visualizing the social network as a graph.
 
    Install these dependencies with the following command:
    ```bash
    pip install networkx matplotlib
+   
+2. **Run the script**:
+
+   Use the following command to run the script:
+   ```bash
+   python main.py
+   ```
+
+## How to Use
+Once the program starts, you'll see a menu with several options. Here's a quick guide to each option:
+
+1. **Add a person**: Type the name of the person you'd like to add to the network.
+2. **Add a connection**: Connect two existing people in the network by entering their names.
+3. **Find shortest path**: Specify two people to find the shortest path between them.
+4. **Find the most influential person**: Discover who has the most connections.
+5. **Find clusters**: Identify clusters (groups of connected individuals) in the network.
+6. **Delete a person**: Remove a person and their connections from the network.
+7. **Delete a connection**: Remove a connection between two people.
+8. **Exit**: Quit the program.
+
+**Example Usage**:
+```plaintext
+
+--- Social Network Graph Analyzer ---
+1. Add a person
+2. Add a connection
+3. Find shortest path
+4. Find the most influential person
+5. Find clusters
+6. Delete Person
+7. Delete Connection
+8. Exit
+Choose an option: 
