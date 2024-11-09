@@ -36,7 +36,7 @@ The Social Network Graph Analyzer simulates a social network where individuals (
     ```
 2. **Navigate to Project Directory**:
     ```bash
-    cd SocialNetworkGraphAnalyzer
+    cd social_network_graph_analyzer
     ```
 3. **Compile the Program**:
     ```bash
