@@ -32,7 +32,7 @@ The Social Network Graph Analyzer simulates a social network where individuals (
 ## Setup
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/SocialNetworkGraphAnalyzer.git
+    git clone https://github.com/samarthsb4real/social-network-graph-analyser.git
     ```
 2. **Navigate to Project Directory**:
     ```bash
